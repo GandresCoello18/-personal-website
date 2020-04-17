@@ -1,0 +1,23 @@
+include head.pug
+.bg-dark
+    include nav.pug
+.container-fluid.p-4
+    h3.text-center.mb-4 Algunos de mis proyectos
+    .row.justify-content-center.mt-5
+        each valor in datos_proyectos
+            .col-12.col-sm-6.col-md-4.col-lx-3.mb-4
+                .ui.card.ml-5.ml-sm-0
+                    .image
+                        img(src='img/proyectos/'+valor.imagen_proy)
+                    .content
+                        a.header= valor.titulo_proy
+                        .meta
+                            span.date 
+                            .description= valor.descripcion_proy
+                    .extra.content
+                        a
+                            i.user.icon 
+                            |  22 Amigos
+
+        
+include footer.pug

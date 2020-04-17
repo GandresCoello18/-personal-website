@@ -1,0 +1,19 @@
+include head.pug
+.bg-dark
+    include nav.pug
+
+.container-fluid.p-5
+    .row.justify-content-center
+        each valor in experiencia
+            .col-12-col-md-6.col-lg-4.mb-4.p-1
+                .card
+                    .card-body
+                            h5.card-title= valor.titulo_ex
+                            p.card-text= valor.descripcion_ex
+                                
+                            p.card-text
+                                small.text-muted= valor.fecha_ex
+                    img.card-img-top(src='img/experiencia/'+valor.imagen_ex, alt=valor.titulo_ex)
+
+        
+include footer.pug

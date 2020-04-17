@@ -1,0 +1,58 @@
+include head.pug
+body
+    .portada
+        .capa_oscura
+            include nav.pug
+            .row.justify-content-center.p-3.text-center
+                .col-8.col-sm-5.col-md-4.col-lg-2.mt-5
+                    figure
+                        img(src='img/profile.jpg')
+                .col-12.col-md-9.col-lg-11.text-white
+                    h1 Desarrollador Web
+                    h2 Andres Coello Goyes
+                    p Joven autodidacta, apasionado por el desarrollo de software y creacion de productos informaticos,
+                    p enfocado  en el desarrollo web y en constante aprendizaje sobre nuevas tecnologias.
+    .container-fluid.p-5
+        h3.text-center.mb-5 Articulos Recientes
+        .row.justify-content-center
+            each valor in articulo
+                .col-12.col-sm-6.col-md-4.col-lx-3.mb-4
+                    .ui.card
+                        .image
+                            img(src='img/blog/'+valor.imagen_arti, alt=valor.titulo_proy)
+                        .content
+                            a.header= valor.titulo_arti
+                            .meta
+                            span.date
+                            br 
+                            .description= valor.descripcion_arti 
+                        .extra.content
+                            a(href='/blog/'+valor.enlace_arti, target='_blank')
+                                i.user.icon
+                                b= valor.categoria
+                                b &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                b Leer Mas...
+
+            
+        h3.text-center.p-4 Protectos Recientes
+        .row.justify-content-center
+            each valor in proyecto
+                .col-12.col-sm-6.col-md-4.col-lx-3.mb-4
+                    .ui.card
+                        .image
+                            img(src='img/proyectos/'+valor.imagen_proy, alt=valor.titulo_proy)
+                        .content
+                            a.header= valor.titulo_proy
+                            .meta
+                            span.date
+                            br
+                            .description= valor.descripcion_proy 
+                        .extra.content
+                            a(href=valor.enlace_pry, target='_blank')
+                                i.user.icon
+                                |  22 Amigos
+                                b &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                b Ver Sitio...
+
+            
+include footer.pug

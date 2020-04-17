@@ -1,0 +1,183 @@
+include head.pug
+.bg-dark
+    include nav.pug
+
+.container-fluid.p-5
+    .row.justify-content-center
+        .col-12.col-md-8
+
+            h2.text-center ESTATICO
+            table.table.text-center
+                thead
+                    tr
+                        th(scope='col') Progreso
+                        th(scope='col') .
+                        th(scope='col') .
+                        th(scope='col') Tech
+                tbody
+                    tr
+                        th(colspan='3') 
+                            #uno.ui.active.progress(data-percent='84')
+                                .bar
+                                    .label.text-white 84% HTML 5
+                        td
+                            i.large.html5.icon
+
+                    tr
+                        th(colspan='3') 
+                            #dos.ui.active.progress(data-percent='70')
+                                .bar
+                                    .label.text-white 70% CSS 3
+                        td
+                            i.large.css3.icon
+
+                    tr
+                        th(colspan='3') 
+                            #tres.ui.active.progress(data-percent='75')
+                                .bar
+                                    .label.text-white 75% Javascript Vanilla
+                        td
+                            i.large.js.icon
+
+                    tr
+                        th(colspan='3') 
+                            #cuatro.ui.active.progress(data-percent='50')
+                                .bar
+                                    .label.text-white 50% SEO
+                        td
+                            i.large.search.icon
+
+                    tr
+                        th(colspan='3') 
+                            #cinco.ui.active.progress(data-percent='65')
+                                .bar
+                                    .label.text-white 65% Control de versiones
+                        td
+                            i.large.git.icon
+                            i.large.github.icon
+
+                    tr
+                        th(colspan='3') 
+                            #seis.ui.active.progress(data-percent='70')
+                                .bar
+                                    .label.text-white 70% Prepocesador
+                        td
+                            i.large.sass.icon
+                            i.large.less.icon
+
+
+            h2.text-center.mt-4 STACK MERN
+            table.table.text-center
+                thead
+                    tr
+                        th(scope='col') Progreso
+                        th(scope='col') .
+                        th(scope='col') .
+                        th(scope='col') Tech
+                tbody
+                    tr
+                        th(colspan='3') 
+                            #siete.ui.active.progress(data-percent='40')
+                                .bar
+                                    .label.text-white 40% Mongo DB
+                        td
+                            i.large.envira.icon
+
+                    tr
+                        th(colspan='3') 
+                            #ocho.ui.active.progress(data-percent='70')
+                                .bar
+                                    .label.text-white 70% Express
+                        td
+                            i.large.node.js.icon
+
+                    tr
+                        th(colspan='3') 
+                            #nueve.ui.active.progress(data-percent='65')
+                                .bar
+                                    .label.text-white 65% React y Redux js
+                        td
+                            i.large.react.icon
+
+                    tr
+                        th(colspan='3') 
+                            #dies.ui.active.progress(data-percent='70')
+                                .bar
+                                    .label.text-white 70% Node js
+                        td
+                            i.large.node.icon
+
+
+            h2.text-center.mt-4 STACK LAMP
+            table.table.text-center
+                thead
+                    tr
+                        th(scope='col') Progreso
+                        th(scope='col') .
+                        th(scope='col') .
+                        th(scope='col') Tech
+                tbody
+                    tr
+                        th(colspan='3') 
+                            #once.ui.active.progress(data-percent='50')
+                                .bar
+                                    .label.text-white 50% Linux
+                        td
+                            i.large.linux.icon
+
+                    tr
+                        th(colspan='3') 
+                            #doce.ui.active.progress(data-percent='50')
+                                .bar
+                                    .label.text-white 50% Apache
+                        td
+                            i.large.server.icon
+
+                    tr
+                        th(colspan='3') 
+                            #trece.ui.active.progress(data-percent='75')
+                                .bar
+                                    .label.text-white 75% MySQL
+                        td
+                            i.large.database.icon
+
+                    tr
+                        th(colspan='3') 
+                            #catorce.ui.active.progress(data-percent='80')
+                                .bar
+                                    .label.text-white 80% PHP
+                        td
+                            i.large.php.icon
+                    
+    h2.text-center.mt-4.mb-4 Formacion Online
+    h3.text-center.p-2 Carreras
+
+    .row.justify-content-center
+        .col-12.mb-4
+            .ui.six.doubling.special.centered.cards
+                each valor in diplomas
+                    a.card.p-2(href=valor.enlace, target='_blank')
+                        .image
+                            img(src=valor.imagen_recon, alt=valor.titulo_recon)
+                            h4.text-center= valor.titulo_recon
+                
+
+    
+    h3.text-center.p-2 Certificados
+
+    .row.justify-content-center
+        .col-12.mb-4
+            .ui.six.doubling.special.centered.cards
+                each valor in certificados
+                    a.card.p-2(href=valor.enlace, target='_blank')
+                        .image
+                            img(src=valor.imagen_recon, alt=valor.titulo_recon)
+                            h4.text-center= valor.titulo_recon
+                
+
+
+
+
+include footer.pug
+
+script(src="js/main.js")

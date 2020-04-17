@@ -1,0 +1,30 @@
+include head.pug
+.bg-dark
+    include nav.pug
+
+.container-fluid.p-5
+    .row.justify-content-center
+        each valor in limite
+            .col-12.col-md-6
+                .card.mb-3
+                    img.card-img-top(src='img/blog/'+valor.imagen_arti, alt=valor.titulo_arti)
+                    .card-body
+                        h5.card-title= valor.titulo_arti
+                        p.card-text= valor.descripcion_arti
+                        
+                        p.card-text
+                            small.text-muted= valor.categiria
+                        a.ui.teal.basic.button(href='/blog/'+valor.enlace_arti) Continuar Leyendo...
+
+        
+    br
+    br
+    
+    div(aria-label='Page navigation example')
+      ul.pagination.justify-content-center
+        - var i=1
+        while i <= Math.ceil(articulos.length/4)
+          li.page-item
+            a.page-link(href='?page='+i)= i++
+
+include footer.pug
