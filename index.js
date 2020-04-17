@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const { config } = require('./config/index');
 const path = require('path');
 const helmet = require('helmet');
 const bodyParse = require('body-parser');
@@ -29,6 +30,6 @@ rutas(app);
 
 
 // levantamos el servidor
-app.listen(5000, function(){
-    console.log('puerto 5000 levantado');
+app.listen(config.port, function(){
+    console.log('app corriendo');
 })
