@@ -2,10 +2,10 @@
   "name": "personal",
   "version": "1.0.0",
   "description": "Sitio web personal y portafolio",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "NODE_ENV=production && node index.js",
+    "dev": "nodemon app.js",
+    "start": "node app",
     "estilo": "node-sass --watch public/scss/ -o public/css/ "
   },
   "keywords": [
