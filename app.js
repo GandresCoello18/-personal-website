@@ -27,6 +27,9 @@ app.set("view engine", "pug");
 rutas(app);
 
 // redireccionamiento
+app.get('*', function(req, res){
+    res.status(404).render('404.pug');
+})
 
 
 // levantamos el servidor

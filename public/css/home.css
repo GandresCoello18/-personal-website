@@ -31,18 +31,28 @@
 footer {
   background-color: #132238; }
 
-@media screen and (min-width: 544px) {
-  body {
-    background-color: green; } }
+  #sabias{
+    background-color: #cdcdcd;
+  }
+  #sabias h6{
+    background-color: rgba(0,0,0,0.8);
+    color: #fff;
+    padding: 5px;
+  }
+  #sabias p{
+      font-weight: bold;
+      padding: 10px;
+      color: #000;
+    
+  }
 
-@media screen and (min-width: 768px) {
-  body {
-    background-color: yellow; } }
-
-@media screen and (min-width: 992px) {
-  body {
-    background-color: orange; } }
-
-@media screen and (min-width: 1200px) {
-  body {
-    background-color: lime; } }
+  #bit{
+    position: relative;
+    margin: auto;
+    border:1px solid #000;
+    font-weight: bold;  
+}
+#bit tr td{
+    border: 1px solid #000;
+    padding: 10px;
+}
