@@ -8,7 +8,7 @@ const rutas = require('./router/rutas');
 const cors = require('cors');
 
 
-const corsOptions = { origin: "http://example.com" };
+const corsOptions = { origin: "https://andres-coello-goyes.herokuapp.com" };
 // nos permite leer el cuerpo del objeto { name: 'mi-nombre' }
 app.use(helmet());
 app.use(cors(corsOptions));
