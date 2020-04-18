@@ -1,0 +1,64 @@
+- var titulo = 'Metodos que utilizan los hacker'
+include head.pug
+.bg-dark
+    include ../nav.pug
+
+.portada_articulo(style=`background-image: url("/img/blog/${info_del_articulo[0]['imagen_arti']}")`)
+    .capa_oscura
+        h2.text-white.text-center= info_del_articulo[0]['titulo_arti']
+
+.container.p-3
+    div.row
+        div.col-12.col-lg-8.col-xl-9.p-2.p-md-5.parrafo_post
+            p.p-2
+            | La mayoría de las personas creen que los hackers son magos, debido a que obtiene información que se suponía imposible de obtener pero la realidad es que estos hackers tiene un conocimiento muy amplio en lo que es la 
+            strong “seguridad informática”
+            |  y conocen métodos de ataque para obtener cierta información.
+            p.p-1
+            | En la mayoría de los casos el culpable es el usuario mismo, debido a que no tiene ni un breve conocimiento en la 
+            strong “seguridad informática”
+            |  haciendo así las cosas más fáciles para los hackers, estas personas no utilizan súper computadoras ni nada por el estilo, simplemente necesitan un ordenador y sus conocimientos.
+            p.p-1
+            strong Fuerza Bruta:
+            |  Se utiliza para descifrar o recuperar alguna contraseña realizando todo los intentos y combinaciones posibles hasta encontrar el verdadero para permitir en acceso.
+            p.p-1
+            strong Engaños:
+            |  Se llevan a cabo mediantes correos electrónicos o sitios web falsos donde se encuentran un sin números de anuncios como: ‘has ganado un premio, eres el usuario 10000 felicitaciones, has ganado un viaje’.
+            p.p-1
+            strong Rastreo:
+            |  se hace a través de rastreo de datos fluyendo a través de redes informáticas como: 
+            b WIFI, LAN, WAN
+            | . Si está conectado a red pública es posible que sea una trampa del atacante debido a que pueda leer toda tu información si están conectado a una misma red.
+            p.p-1
+            strong Suplantación de identidad:
+            |  incluyen correos con identidad falsa o de formas bancarias. Utilizan 
+            b DNS
+            |  para re direccionar a los usuarios a un sitio falso o incluso utilizan direcciones 
+            b IP
+            |  totalmente falsas para acceder a sitios en específico.
+            p.p-1
+            strong Puerta trasera:
+            |  se lleva a cabo gracias a aplicaciones o programas que son instaladas en nuestros dispositivos, insertando así 
+            b Troyanos
+            |  o pueden leer los que escribes gracias a Grabadoras de teclado, también mediante escaneos falsos.
+            .row.mt-3
+                .col-12.col-md-6
+                    p.p-1
+                    strong Ingeniería Social:
+                    |  incluyen ataques utilizando a los usuarios como los eslabones débiles. Pueden que te llamen con el fin de sacar información de ti o buscar en tus perfiles en las redes sociales.
+                .col-12.col-md-6
+                    #sabias
+                        h6.text-center ¿Sabias esto?
+                        p.p-2
+                            | Cuando un hacker realiza sus fechorías, siempre queda un registro de las actividades que realizo, así es como borran todo el historial ya sea del sistema operativo o de los navegadores, lo hacen con el fin de no ser rastreados o encontrados.
+
+
+        .col-12.col-lg-4.col-xl-3.p-2
+             
+            br
+            br
+
+            include compartir.pug
+
+
+include ../footer.pug

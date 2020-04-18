@@ -1,13 +1,20 @@
+var axios = require('axios');
+
 function dominio(){
     return "https://andres-coello-goyes.herokuapp.com";
 }
 
 function dominio_developer(){
-    return "127.0.0.1:3000";
+    return "http://127.0.0.1:3000";
+}
+
+async function info_articulo(articulo){
+    return await axios.get(`${dominio()}/api/blog?articulo=${articulo}`);
 }
 
 
 module.exports = {
     dominio,
-    dominio_developer
+    dominio_developer,
+    info_articulo
 }

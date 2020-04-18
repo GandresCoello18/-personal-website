@@ -1,0 +1,43 @@
+- var titulo = 'Mejorar mis habilidades'
+include head.pug
+.bg-dark
+    include ../nav.pug
+
+.portada_articulo(style=`background-image: url("/img/blog/${info_del_articulo[0]['imagen_arti']}")`)
+    .capa_oscura
+        h2.text-white.text-center= info_del_articulo[0]['titulo_arti']
+
+.container.p-3
+    div.row
+        div.col-12.col-lg-8.col-xl-9.p-2.p-md-5.parrafo_post
+            p.p-2
+            | Te ha sucedido que tienes el entusiamo, las ganas, los motivos necesarios para aprender algo pero con pasar el tiempo ese motivacion va disminullendo. dejame decirte que no eres el unico a quien le sucede esto pues es muy comun pero tienes que saber como sobrellevarlo.
+            p.p-1
+            | Es muy duro permanecer atrento a algo como una: 
+            strong explicacion
+            |  mas cuando se trata de un tema que no te llama la atencion y ese es el primer punto instrullete de aquellos temas que te facinen, que te llamen la atencion, a eso que amas hacer. Otro punto importante 
+            b rodeate
+            |  de la gente que contenga tus mismas paciones ya ellos te pueden animar a seguir con tus obetivos.
+            p.p-1
+            | Es comun desanimarte o incluso aislarte de lo que mas te gusta simplemente por comentarios negativos, obsenos de la gente inapropiada que te rodea, piensa en esto te gusta la musica clasica, tranquila y relajante. Pero a tus compañeros le gusta el ruido, harmar escandalos sin importar donde esten y comparten los mismo gutos que los tuyos. Crees tu que te ayudaran a progresar y mejorar tus habilidades o mas bien crees que te estancaran involucrandote a cosas que no biene con tu estilo.
+            p.p-1
+            | Leer articulos o definiciones de aquellos temas te ayudaran a entenden mejor tus objetivos ya que de nada sirve que leas o estudies si no tienes claro lo que quieres hacer. Deja a un lado la timidez y pregunta a personas con experiensa en que puedes mejorar y entablar una amistad con uno de ellos, observar las habilidades de los demas y preguntandote a ti mismo que me falta por hacer o que me falta por mejorar son preguntas que debes hacerte.
+            .row
+                .col-12.col-md-6
+                    p.p-1
+                    | Consulta a internet, practicamente se encuentra un monton de informacion valiosa y opiniones de gente con experienza. esto es una herramienta no un juguete de entretenimiento.
+                .col-12.col-md-6
+                    #sabias
+                        h6.text-center ¿Sabias esto?
+                        p.p-2
+                            | Dedicarle un poco mas de tiempo y esfuerzo mas de los acostumbrado puede generarte mejores resultado en tu aprendizaje.
+
+        .col-12.col-lg-4.col-xl-3.p-2
+             
+            br
+            br
+
+            include compartir.pug
+
+
+include ../footer.pug

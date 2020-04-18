@@ -1,0 +1,55 @@
+- var titulo = 'Diferencia entre HTTP y HTTPS'
+include head.pug
+.bg-dark
+    include ../nav.pug
+
+.portada_articulo(style=`background-image: url("/img/blog/${info_del_articulo[0]['imagen_arti']}")`)
+    .capa_oscura
+        h2.text-white.text-center= info_del_articulo[0]['titulo_arti']
+
+.container.p-3
+    div.row
+        div.col-12.col-lg-8.col-xl-9.p-2.p-md-5.parrafo_post
+            p.p-2
+            | Conocemos muchos estos 2 tipos de protocolos  el primero es 
+            strong HTTPS
+            |  y  de seguro has visto que también existe 
+            strong HTTP
+            | .
+            p.p-1
+            | “HTTP” no suele ser seguro que quiero decir: por ejemplo si envías datos confidenciales, personales, privados viajan al servidor tal como lo especificaste  no contiene ningún tipo de seguridad, o encriptación lo cual es muy malo si se trata de un sitio de compras donde tienes que utilizar la tarjeta de crédito, o si te registras con tus datos en algún formulario.
+            h5.text-center ¿Qué riesgos contiene http?
+            p.p-1
+            | Bueno cuando la información viaja hacia el servidor casi nunca se obtiene una conexión directa que quiero decir: supongamos que tú envías algo desde tu ordenador en ecuador y el servidor se encuentra en chile. Esa información pasa por diferentes computadores para que pueda llegar a su destino, en el transcurso del proceso esos computadores pueden leer tus datos sin ningún problema y es ahí donde surge el robo de información.
+            p.p-1
+            | Los “Sniffers” son los encargados del monitorear el tráfico de internet atraves de los puertos que conocemos y es ahí donde los hacker aprovechan para tener acceso a tus datos.
+            h5.text-center ¿Hablemos de https?
+            p.p-1
+            | “HTTPS” su proceso es mucho más complejo y eso es algo bueno
+            | Interactúa con un mini documento o certificado  que contiene unas series de números que certifican quien eres.  Entonces eso pasa por un proceso para comprobar si esta todo correcto tomando el ejemplo anterior cuando tratas de enviar información al servidor, el ordenador se conecta a una red encriptada permitiendo que tus datos sean seguro.
+            p.p-1
+            | ósea si tu digitas “1234” durante el proceso se transformara en “7f3t” pero sigue siendo la misma información al llegar al servidor esta se dese cripta.
+            h5.text-center ¿Qué pasa si otro ordenar recibe el mismo certificado?
+            p.p-1
+            | En el proceso de comprobación del certificado también provee unas llaves únicas por así decirlo esa llave se llama key Publicó y el servidor contiene una llave llamada key privada. Puede que el certificado coincida. Pero la llave es diferente así que la información encriptada es diferente a tus datos encriptados ósea no significa lo mismo.
+            p.p-1
+            | Tomando en cuenta  el mismo ejemplo anterior: los computadores encargados de transmitir la información hacia el servidor, ellos observan los datos encriptados “7f3t” pero no entiende lo que quiere decir.
+            .row
+                .col-12.col-md-6
+                    p.p-1
+                    | Es así como los hacker también los ven pero no los entienden ya que está cifrado de extremo a extremo entonces eso se vuelve una información confidencial y segura.
+                .col-12.col-md-6
+                    #sabias
+                        h6.text-center ¿Sabias esto?
+                        p.p-2
+                            | Si estas en un sitio web y necesitas hacer transacciones o comprar algo asegurate que en la parte superior izquierda de tu navegador en la URL contenga las letra "https//".
+
+        .col-12.col-lg-4.col-xl-3.p-2
+             
+            br
+            br
+
+            include compartir.pug
+
+
+include ../footer.pug

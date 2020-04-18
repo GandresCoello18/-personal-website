@@ -1,0 +1,78 @@
+- var titulo = 'Arquitectura frontend para cualquier resolucion de pantalla'
+include head.pug
+.bg-dark
+    include ../nav.pug
+
+.portada_articulo(style=`background-image: url("/img/blog/${info_del_articulo[0]['imagen_arti']}")`)
+    .capa_oscura
+        h2.text-white.text-center= info_del_articulo[0]['titulo_arti']
+
+.container.p-3
+    div.row
+        div.col-12.col-lg-8.col-xl-9.p-2.p-md-5.parrafo_post
+            p.p-2
+            | Uno de los objetivos de los 
+            strong desarrolladores web
+            |  es que su diseño pueda tener una buena apariencia en cualquier tamaño de pantalla, en cualquier resolución, en cualquier dispositivo. Quizás te preguntes 
+            b ¿Se crear un diseño diferente para cada dispositivo o pantalla?
+            p.p-1
+            | Pues la verdad que no es así, el 
+            strong Responsive Design
+            |   se trata de crear un solo diseño y adaptarlo para cada tamaño de pantalla.
+            p.p-1
+            | Si entras a un sitio web desde un ordenador probablemente te habrás dado cuenta que se visualiza mucha información porque hay suficiente espacio, pero si vas achicando tu pantalla y llegas al tamaño de una Tablet te darás cuenta que algunas informaciones se ocultaron y ahora está disponible dentro de un menú vertical.
+            p.p-1
+            | Esto pasa por que el espacio horizontal se va disminuyendo y llegara al punto de que todos los elementos estén unos encima de otros. Esto puede perjudicar a la 
+            b experiencia de usuario
+            |  ya que no se podrá navegar en tal sitio debido a que no puedas entender nada.
+            p.p-1
+            | Entonces 
+            b ¿Cómo lo hacen?
+            |  Pues existen algunas maneras, una de ellos se llama 
+            code “MEDIAS QUERY”
+            |  y se llevan a cabo gracias al lenguaje de estilos en cascada llamado 
+            code CSS
+            | , esta tiene una funcionalidad de saber cuál es el tamaño de la pantalla actual, dependiendo en tamaño especificado realizara los cambios respectivos en tu sitio. Aunque no es tan difícil de dominarlo requiere tiempo de práctica.
+            p.p-1
+            | Otra forma seria gracias a los 
+            strong FRAMEWORK:
+            |  un framework es un conjunto de código escrito por otros desarrolladores, para la comunidad y facilitando el desarrollo en algún proyecto. Por ejemplo si necesitas un 
+            b ‘carrusel’
+            |  para tu sitio no es necesario escribir todo el código para realizarlo, simplemente llamas al elemento que deseas utilizar y realizar modificaciones a tu gusto como serían las imágenes a mostrar.
+            p.p-1
+            | Uno de los más populares es 
+            strong ‘Bootstrap’
+            |  debido a su sistema de 
+            b grillas
+            | , es decir utiliza filas y columnas para los elementos y de esta forma cada elemento está en su respectivo lugar sin afectar a los demás elementos.
+            .row
+                .col-12.col-md-6
+                    p.p-1
+                    | Te animo a que utilices estas tecnologías ya que todos los 
+                    strong navegadores
+                    |  lo acepta, ahora 
+                    b ¿Qué tan importante es el Responsive Design?
+                    |  Un primer lugar mejora la experiencia del usuario, es decir que si tu sitios es agradable y probablemente los usuarios vuelvan a visitarla, y también es importante en temas de 
+                    code SEO
+                    |  ya que 
+                    code GOOGLE
+                    |  sabe muy bien cuando un sitio es RESPONSIVO o NO.
+                .col-12.col-md-6
+                    #sabias
+                        h6.text-center ¿Sabias esto?
+                        p.p-2
+                            | Existe el método de realizar ZOOM colocando los 2 dedos en tu pantalla móvil, esto es muy favorable si tu sitio no es RESPONSIVE DESIGN. De lo contrario si quiere evitar esta acción existe una pequeña línea de código que lo hace posible.  
+                            br
+                            code
+                            | meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minium-scale=1.0"
+
+            
+        .col-12.col-lg-4.col-xl-3.p-2
+             
+            br
+            br
+
+            include compartir.pug
+
+
+include ../footer.pug

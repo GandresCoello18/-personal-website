@@ -1,3 +1,4 @@
+- var titulo = 'Portafolio | Andres Coello Goyes'
 include head.pug
 .bg-dark
     include nav.pug
@@ -15,9 +16,10 @@ include head.pug
                             span.date 
                             .description= valor.descripcion_proy
                     .extra.content
-                        a
-                            i.user.icon 
-                            |  22 Amigos
+                        a(href=valor.enlace_pry, target='_blank')
+                                i.globe.icon
+                                b &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                b Ver Sitio...
 
         
 include footer.pug

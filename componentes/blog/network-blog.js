@@ -4,8 +4,9 @@ const controller = require('./controller-blog');
 const router = express.Router();
 
 router.get('/', function(req, res){
+    const { articulo } = req.query || null;
 
-    controller.listar_blog()
+    controller.listar_blog(articulo)
         .then( data => {
             response.success(req, res, 200, data);
         }).catch( err => {

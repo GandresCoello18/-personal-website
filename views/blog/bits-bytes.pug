@@ -1,0 +1,105 @@
+- var titulo = 'Que son los Bits y Bytes'
+include head.pug
+.bg-dark
+    include ../nav.pug
+
+.portada_articulo(style=`background-image: url("/img/blog/${info_del_articulo[0]['imagen_arti']}")`)
+    .capa_oscura
+        h2.text-white.text-center= info_del_articulo[0]['titulo_arti']
+
+.container.p-3
+    div.row
+        div.col-12.col-lg-8.col-xl-9.p-2.p-md-5.parrafo_post
+            p.p-2
+            | Bit es la unidad mínima de información en informática. Nuestro entorno digital se basa en bit es  decir 
+            strong (0 – 1) ceros y unos
+            | , todo esto tiene que ver gracias a la electricidad que contiene nuestros dispositivos informaticos. La electricidad se basa en 2 componentes 
+            strong (Encendido – Apagado)
+            |  es asi como 0 significa “apagado” y 1 significa “encendido”.
+            h5.text-center ¿Pero que tiene que ver con la informatica?
+            p.p-1
+            | El lenguaje de Maquina es el idioma oficial de los ordenadores y se denomina
+            strong  lenguaje binario (0-1)
+            |  para nosotros los seres humanos puede que se nos dificulte mucho escribir una serie de instrucción en lenguaje de Maquina es por esa misma razon que no existian tantos programadores en los tiempos de antes debido a su gran complejidad. Pero para el ordenador es super facil de entender e interpretar.
+            p.p-1
+            | Los binarios funcionan con sistemas de 
+            strong base 2
+            |  es decir que la columna vale 
+            b 2
+            |  veces más que el de la derecha.
+            table#bit
+                tbody
+                    tr
+                        td 64
+                        td 32
+                        td 16
+                        td 8
+                        td 4
+                        td 2
+                    tr
+                        td 1
+                        td 1
+                        td 0
+                        td 1
+                        td 0
+                        td 0
+            p.p-1
+            | Supongamos que el numero 
+            b 104
+            |  es ingresado por el usuario, el procedimiento que realiza el ordenador es summar todas las casiillas que esten encendidas es decir los que contengan 1.
+            p.p-1
+            b 64+32+8=104
+            p.p-1
+            | Existr algo llamado compilador que tiene como tarea traduccir los valores que ingresa el usiario a lenguaje de maquina es por esta razon que mucha mas personas se animan a programar por lo que ahí mas facilodad de escribir codigo.
+            h5.text-center ¿Que son los byte?
+            p.p-1
+            | Para poder representar o codificar más información se hizo necesario crear una nueva unidad de medida llamada 
+            b Byte
+            | .
+            table#bit
+                tbody
+                    tr
+                        td 01000011
+                        td c
+                    tr
+                        td 01100101
+                        td e
+                    tr
+                        td 01101100
+                        td l
+                    tr
+                        td 01110101
+                        td u
+                    tr
+                        td 01101100
+                        td l
+                    tr
+                        td 01100001
+                        td a
+                    tr
+                        td 01110010
+                        td r
+            .row.mt-3
+                .col-12.col-md-6
+                    p.p-1
+                    | Un bytes es una unidad de memoria que guarda un carácter y cada bytes esta compuesto por un conjunto de 
+                    strong 8 bits
+                    |  o también llamado 
+                    strong octetos
+                    | . Veamos ahora cuantos bits y bytes ocupa una palabra.
+                .col-12.col-md-6
+                    #sabias
+                        h6.text-center ¿Sabias esto?
+                        p.p-2
+                            | Los bit y byte se encuentra en todas partes de la informatica en los arduinos, aplicaciones, redes, circuitos electronicos, pero muchos lo llegaron a conocer mas afondo en la programacion, ya que te preguntaras como hace el ordenador para traducir el codigo.
+
+
+        .col-12.col-lg-4.col-xl-3.p-2
+             
+            br
+            br
+
+            include compartir.pug
+
+
+include ../footer.pug

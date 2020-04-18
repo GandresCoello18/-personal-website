@@ -1,0 +1,75 @@
+- var titulo = 'Tips contra hackers'
+include head.pug
+.bg-dark
+    include ../nav.pug
+
+.portada_articulo(style=`background-image: url("/img/blog/${info_del_articulo[0]['imagen_arti']}")`)
+    .capa_oscura
+        h2.text-white.text-center= info_del_articulo[0]['titulo_arti']
+
+.container.p-3
+    div.row
+        div.col-12.col-lg-8.col-xl-9.p-2.p-md-5.parrafo_post
+            p.p-2
+            | Existen maneras de proteger tu información de estas personas llamadas hackers aunque  no todos tienen la mentalidad de hacer el MAL, existe una gran parte de hackers que prefieren ayudar a la comunidad. Aun así veamos algunas reglas para estar seguros.
+            h5.text-center Conexión Segura
+            p.p-1
+            strong Https:
+            |  cuando navegas por internet y entras a un sitio web asegúrate de tener activado el protocolo HTTPS ya que es utilizado para encriptar la información del usuario.
+            p.p-1
+            strong APP:
+            |  las aplicaciones descargadas e instaladas que no forman parte de una tienda como la 
+            b Play Store
+            | , puede ser un método de ataque para tu información.
+            p.p-1
+            strong WIFI:
+            |  a la hora de conectarte a una red wifi asegúrate de que tenga 
+            b WPA2
+            |  ya que son métodos de encriptación muy útiles, si es una red pública probable mente no lo contenga, esto quiere decir que tu información puede ser abstraída.
+            p.p-1
+            strong INCOGNITO:
+            |  Es muy fácil de utilizar ya que todo los navegadores lo tienen, esto permite navegar en sitios con el fin de eliminar 
+            b cookies o historial
+            |  al momento que cierres esa pestaña.
+            h5.text-center Contraseña
+            p.p-1
+            strong Contraseña segura:
+            |  Al momento de pensar un contraseña para tu cuenta asegúrate que sea de forma aleatoria es decir que no sea la misma contraseña de tus otras cuentas evita escribir como número telefónico, tu nombre, o nombre de algún pariente, o novia.
+            p.p-1
+            strong Fecha de expiración:
+            |  cada cierto tiempo asegúrate de cambiar tu contraseña  puede ser cada 3 meses  o cada 5 meses.
+            p.p-1
+            | Ten en cuenta que una contraseña nunca es suficiente ya que puede ser robada fácilmente, es por eso que es necesario tener otros métodos como Dibujos de 
+            b patrones
+            | , huellas digitales.
+            h5.text-center Email
+            p.p-1
+            strong Correos seguros:
+            |  cuando te llegue un mensaje al correo sobre alguna promoción o anuncio debes de tener mucho cuidado ya que muchos contiene 
+            b enlaces
+            |  o 
+            b link
+            |  que te redirigen así sitios no seguros o sitios falsos.
+            h5.text-center Actualizaciones
+            .row
+                .col-12.col-md-6
+                    p.p-1
+                    | Mantente al día con las actualizaciones de tu dispositivo o de aplicaciones ya que te permitirán estar mucho más seguro de los ataques, ya que cada vez se descubren nuevos hoyos de 
+                    b vulnerabilidad
+                    |  en los sistemas.
+                .col-12.col-md-6
+                    #sabias
+                        h6.text-center ¿Sabias esto?
+                        p.p-2
+                            | Si tienes una mala administración de tu perfil en las redes sociales, los extraños pueden saber mucho sobre ti así que evita compartir información, fotografías y ubicaciones a desconocidos. Con esto también se refiere a no aceptar como amigo a personas desconocidas.
+
+
+        .col-12.col-lg-4.col-xl-3.p-2
+             
+            br
+            br
+
+            include compartir.pug
+
+
+include ../footer.pug

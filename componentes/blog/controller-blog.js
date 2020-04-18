@@ -1,7 +1,7 @@
 const store = require('./store-blog');
 
-async function listar_blog(){
-    return await store.listar();
+async function listar_blog(articulo){
+    return await store.listar(articulo);
 }
 
 async function limite_por_pantalla(page){

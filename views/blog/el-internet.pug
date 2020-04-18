@@ -1,0 +1,50 @@
+- var titulo = 'La red mas grande'
+include head.pug
+.bg-dark
+    include ../nav.pug
+
+.portada_articulo(style=`background-image: url("/img/blog/${info_del_articulo[0]['imagen_arti']}")`)
+    .capa_oscura
+        h2.text-white.text-center= info_del_articulo[0]['titulo_arti']
+
+.container.p-3
+    div.row
+        div.col-12.col-lg-8.col-xl-9.p-2.p-md-5.parrafo_post
+            p.p-2
+            | En nuestra vida cotidiana se ha vuelto normal  consultar cosas o solicitar información en internet pero ¿Sabes cuál es el proceso que ejecuta internet para mostrarte los resultados?
+            p.p-1
+            | Primeramente necesitamos algún dispositivo con acceso a internet supongamos que estas solicitando una información como ¿Cuál es el último tema de tal artista?  ¿Cuántos años tiene en el mundo de la música? Y cosas así, eso lo escribes en el buscador, uno de los más famosos es “GOOGLE” pero existen muchos más. Entonces tu solicitud viaja por internet hasta llegar a un “Servidor” ¿Qué es esto? Pues los servidores son un ordenador o conjunto de ordenadores que contiene unas bases de datos que almacena muchísima información.
+            p.p-1
+            | Dejado esto claro tu petición es procesada por el servidos buscando los datos que solicitaste, una vez listo esos datos regresan de la misma forma que llegaron y se muestra en la pantalla de tu dispositivo. Tomemos encuentra que esta breve explicación es solo para que tengas una idea de cómo funciona, pero en realidad sus procesos son muchos más complejos.
+            h5.text-center ¿Cómo sabe el servidor a que dispositivo mostrar los resultados? 
+            p.p-1
+            | Bueno cada dispositivo contiene una serie de números llamados IP es algo así  (123.36.28.2)  que sirve para distinguir unos dispositivos de otros esta IP la proporciona tu proveedor de internet.
+            h5.text-center ¿Qué pasaría si alguien más tiene el mismo proveedor de internet?
+            p.p-1
+            | Son muchísimas personas que contratan internet con el mismo proveedor pero el numero IP nunca va hacer igual y eso es lo que los diferencia.
+            h5.text-center
+            | ¿Te has dado cuenta que tu navegador guarda la información de tus peticiones anteriores o relacionadas con el tema?
+            p.p-1
+            | Eso es gracias a un archivo que se llama COOKIE este elemento contiene un pequeño espacio del disco duro que está dedicado al uso de tus peticiones. Esta cookie normalmente guarda información valiosa como tú nombre de usuario, cuanto tiempo permaneciste activo, la fecha de la última visita y cosas así.
+            p.p-1
+            | Cuando haces tus peticiones por internet también viajan estas cookie y son procesados por los servidores, No te preocupes pues todo esto va encriptado ósea se transforma en una serie de caracteres.
+            .row
+                .col-12.col-md-6
+                    p.p-1
+                    | Un ejemplo puede ser los productos que se vende por internet ellos utilizan cookie para saber si lo visitas por primera vez o por cuarta vez, cuanto tiempo estas en la sección de comprar y que articulo más te interesa
+                .col-12.col-md-6
+                    #sabias
+                        h6.text-center ¿Sabias esto?
+                        p.p-2
+                            | Navegar por internet no es tan seguro como parace tus datos pueden ser extraidos o eliminados, pero existen metodos para segurar tu informacion una de ellas son las VPN.
+
+
+        .col-12.col-lg-4.col-xl-3.p-2
+             
+            br
+            br
+
+            include compartir.pug
+
+
+include ../footer.pug

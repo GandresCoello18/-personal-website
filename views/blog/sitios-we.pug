@@ -1,0 +1,87 @@
+- var titulo = 'Los sitios y aplicaciones web'
+include head.pug
+.bg-dark
+    include ../nav.pug
+
+.portada_articulo(style=`background-image: url("/img/blog/${info_del_articulo[0]['imagen_arti']}")`)
+    .capa_oscura
+        h2.text-white.text-center= info_del_articulo[0]['titulo_arti']
+
+.container.p-3
+    div.row
+        div.col-12.col-lg-8.col-xl-9.p-2.p-md-5.parrafo_post
+            p.p-2
+            | Los sitios o aplicaciones web se dividen en 2 partes. La parte que se visualiza y la parte que no se visualiza, los desarrolladores lo conocen como 
+            strong Frontend
+            |  y 
+            strong Backend
+            | . El Frontend utiliza tecnologías como 
+            strong HTML
+            |  que es un lenguaje de etiquetas e impertexto. 
+            strong CSS
+            |  son estilos en cascadas útiles para mejorar la apariencia y diseño de tu sitio. 
+            strong JAVASCRIPT
+            |  es un lenguaje programación y es el encargado de realizar la interactividad hacia el usuario.
+            p.p-1
+            | Si dominas estas 3 tecnologías Felicidades ya puedes desarrollar un sitio 
+            strong ESTATICO
+            | , quiere decir un sitio donde solo muestre información como: título, párrafo, imágenes, enlaces, videos y más…
+            p.p-1
+            | Pero también existen los sitios 
+            strong DINAMICOS
+            |  que utiliza tecnologías del Frontend y Backend estos son. 
+            strong PHP
+            |  es un lenguaje de programación que funciona del lado del 
+            strong servidor
+            |  esto hace que el código sea secreto y el usuario no pueda modificarlo. 
+            strong MySQL
+            |  es un gestor de base de datos que me permite construir tablas, campos, relaciones. Es aquí donde se guarda la información del usuario.
+            p.p-1
+            | Si no estás a gusto con estas tecnología existen otras que son NODE.JS que es un entorno de ejecución para 
+            strong JAVASCRIPT
+            |  quiere decir que podrás utilizar JAVASCRIPT tanto en el navegador como en el servidor. 
+            strong MONGO DB
+            |  es una base de datos NO relacional.
+            p.p-1
+            | También existe otra tecnología llamado 
+            strong DJANGO
+            |  que es un Framework del lenguaje de programación 
+            strong PYTHON
+            |  y puedes utilizar MySQL como base de datos.
+            p.p-1
+            | Una vez que domines las tecnologías para el backend Felicidades ya puedes desarrollar un sitio Dinámico o una Aplicación web. Normalmente las personas que están comenzando en  este mundo aprender PHP y MySQL ya que se le resulta más fácil.
+            p.p-1
+            | Muy bien ahora pongamos un ejemplo de la vida cotidiana para que lo puedas entender mucho mejor, imagina que tienes 
+            strong 10.000$
+            |  y quieres construir tu propia casa. Lo primero que necesitas es tu terreno o área donde se construirá tu casa.  Lo primero que haces es levantar los pilares o columnas para que sea resistente a temblores o fuertes torrenciales. Luego colocas los ladrillos o bloques y con una buena arquitectura y tejado obtendrás tu casa. Aunque ya puede ser habitada tu casa puedes decorarla o pintarla incluso realizar una fachada hermosa. También necesitaras puertas para entrar y salir, ventanas para que entre luz o aire.
+            p.p-1
+            | Hasta aquí hemos utilizado las tecnologías del FRONTEND 
+            strong ¿Cómo así en que momento?
+            | 				    HTML son los pilares o columnas de tu casa, CSS es el diseño y apariencia de tu casa Y JavaScript son las puertas  y ventanas que interactúan con el usuario como abrir o cerrar las puertas o ventanas.
+            p.p-1
+            | Ahora imagina que en tu casa colocas una pequeña tienda tu propio negocio, ese negocio es administrado por una sola persona y contiene muchos productos que vender. Los clientes se acercan para comprar lo que necesite.
+            .row.mt-3
+                .col-12.col-md-6
+                    p.p-1
+                    | Hasta aquí hemos visto las tecnologías del Backend 
+                    strong ¿Cómo así en que momento?
+                    |  Psi el Backend simplemente muestra las peticiones que especifica el usuario. 
+                    | 					        La persona que administra la tienda es considerado PHP y los productos almacenados en tu tienda es 
+                    strong MySQL
+                    | , cuando el usuario hace una petición de un producto a comprar el administrador busca en su almacenamiento aquel producto y lo muestra o se lo vende al usuario.
+                .col-12.col-md-6
+                    #sabias
+                        h6.text-center ¿Sabias esto?
+                        p.p-2
+                            | Para desarrollar un sitio DINAMICO necesitas de programas como Xampp o Wampserver que te permitirá ejecutar código PHP y comandos MySQL . Es un servidor local que te permitirá ver los resultados sin la necesidad de subir tus archivos a un Hosting.
+
+
+        .col-12.col-lg-4.col-xl-3.p-2
+             
+            br
+            br
+
+            include compartir.pug
+
+
+include ../footer.pug

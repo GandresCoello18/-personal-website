@@ -1,0 +1,145 @@
+- var titulo = 'Bases de datos - MySQL'
+include head.pug
+.bg-dark
+    include ../nav.pug
+
+.portada_articulo(style=`background-image: url("/img/blog/${info_del_articulo[0]['imagen_arti']}")`)
+    .capa_oscura
+        h2.text-white.text-center= info_del_articulo[0]['titulo_arti']
+
+.container.p-3
+    div.row
+        div.col-12.col-lg-8.col-xl-9.p-2.p-md-5.parrafo_post
+            p.p-2
+                | Te has preguntado alguna vez donde se almacena la información de los usuarios ya sea que estés utilizando una aplicación o en un sitio de internet, esto es gracias a las 
+                strong bases de datos
+                |  donde se guardan grandes cantidades de información.
+            p.p-1
+                | Un ejemplo seria 
+                strong Facebook
+                |  ellos almacena mucha información de cada usuario como nombres y apellidos completos, edad, fecha de nacimiento, nombre Usuario, contraseña, foto de perfil, dirección, numero telefónico y mucho más.
+            p.p-1
+                | Pero también existe el método 
+                strong entidad relacion
+                |  que es uno de los más utilizados y una vez más Facebook lo utiliza es por eso que en tu perfil existen la sección “amigos en común” por qué tu cuenta puede estar relacionado con otras, es por eso que solo tus amigos puede de enterarse de tus últimas publicaciones. Los 
+                strong Like
+                |  también se relacionan ya que puedes dar like no solo a una publicación sino a muchas y de diferentes personas de igual manera sucede con los comentarios.
+            p.p-1
+                | Ahora hablemos sobre aquellos 
+                strong gestores de bases de datos
+                |  la verdad es que existen muchos, algunos tienen mucho en común y otros tienen diferencias estos son:
+            p.p-1
+                strong MySQL
+                |  – 
+                strong postgreSQL
+                |  – 
+                strong SqlLite
+                |  – 
+                strong SQLserver
+                |  - 
+                strong Mongo DB
+            p.p-1
+                | Uno de los más populares es MySQL, es muy utilizado para aplicaciones web como de escritorio y contiene entidad relación lo cual es muy bueno. Si deseas aprender esta tecnología te invito a descargarlo de internet y empieza a aprender sin límites. Una vez instalado en tu ordenador puedes comenzar a crear una base de datos completamente nueva, lo puedes hacer con la interfaz gráfica o mediante la 
+                strong línea de comandos
+                | .
+            p.p-1
+                | Una base de datos contiene tablas esas tablas contiene  filas y columnas estas filas y columnas contiene campos y atributos, si gustas puedes profundizar este tema por ti mismo.
+            p.p-1
+                | Imaginemos que tienes un 
+                b mini Marquet
+                |  y necesitas registrar los productos que tiene en el almacén, entonces creas una tabla llamada 
+                b “Productos-Almacenados”
+                |  con sus respectivos campos como: 
+                code ID-prod
+                | , 
+                code Nombre-prod
+                | , 
+                code Cantidad-prod
+                | , 
+                code fecha-de-caducacion
+                |  y con sus respectivos atributos como: tipo de dato varchar, int, float, text, number y la longitud.
+            p.p-1
+                | Una vez termina tu estructura empiezas a llenar tu tabla de información pero 
+                b ¿Cómo lo hacemos?
+                |  Existen comandos para realizar estas tares como: 
+                code "INSERT INTO SET"
+                |  que nos permite insertar información veamos todo el procedimiento.
+            p.p-1
+                code INSERT INTO
+                |  Producto-Almacenado 
+                code SET
+                b Nombre-prod
+                | =’leche’, 
+                b Cantidad-prod
+                | =’32’, 
+                b Fecha-de-caducacion
+                | =’02-03-2020’;
+            p.p-1
+                | Ahora necesitas mostrar la información y eso lo hacemos con el comando ‘
+                code SELECT
+                | ’ veamos el proceso completo.
+            p.p-1
+                code SELECT * FROM
+                |  Producto-Almacenado;
+            p.p-1
+                | Este nos permite abstraer o mostrar toda la información que está en nuestra tabla, pero ahora imaginemos que solo necesitas mostrar un registro en específico, para eso utilizamos 
+                code WHERE
+                |  veamos el ejemplo.
+            p.p-1
+                code SELECT * FROM
+                |  Producto-Almacenado 
+                code WHERE
+                b Nombre-prod
+                | =’leche’;
+            p.p-1
+                | Ahora solo se mostrar aquel registro que tenga en su campo Nombre-prod el valor de ‘Leche’;
+            p.p-1
+                | Ahora imagina que tus clientes comprar leche diariamente por lo tanto tu registro debe ser actualizado y 
+                b ¿Cómo hacemos eso?
+                |  Veamos el comando a continuación.
+            p.p-1
+                code UPDATE
+                |  Producto-Almacenado 
+                code SET
+                b Cantidad-prod
+                | =’25’ 
+                code WHERE
+                b Nombre-prod
+                | =’leche’;
+            p.p-1
+                | El comando UPDATE sirve para actualizar o modificar un registro aunque debes de escribir el nombre de la tabla y el campo que vas a cambiar, si te distes cuenta he utilizado 
+                code WHERE
+                |  porque necesito especificar aquel registro a modificar, si en algún caso no utilizaría WHERE el resultado sería que todos los campos se modificaría y en realidad no quisieras eso.
+            p.p-1
+                | Ahora imagina que descartaras un producto porque ya no lo vendes en tu mini Marquet, necesitas eliminar de tu base de datos y 
+                b ¿Cómo lo hacemos?
+                |  Veamos el comando.
+            p.p-1
+                code DELETE FROM
+                |  Producto-Almacenado 
+                code WHERE
+                b Nombre-prod
+                | =’Leche’;
+            .row
+                .col-12.col-md-6
+                    p.p-1
+                        | El comando 
+                        code DELETE
+                        |  sirve para eliminar registro pero necesitamos especificar la tabla y el registro, y también he utilizado 
+                        code WHERE
+                        |  para especificar el producto que ya no venderé o el producto que deseo eliminar, si no lo utilizaría probablemente se eliminar todos tus registros de tu tabla.
+                .col-12.col-md-6
+                    #sabias
+                        h6.text-center ¿Sabias esto?
+                        p.p-2
+                            | Las tablas contiene claves Primarias o ‘PRIMARY KEY’  es un campo o a una combinación de campos que identifica de forma única a cada fila de una tabla.
+                            | Claves foráneas  es una limitación referencial entre dos tablas. Entender esto es muy importante si utilizaras ‘entidad relación’.
+        .col-12.col-lg-4.col-xl-3.p-2
+             
+            br
+            br
+
+            include compartir.pug
+
+
+include ../footer.pug

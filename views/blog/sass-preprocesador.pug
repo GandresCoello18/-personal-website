@@ -1,0 +1,91 @@
+- var titulo = 'Sass - Diseñar y programar a la vez'
+include head.pug
+.bg-dark
+    include ../nav.pug
+
+.portada_articulo(style=`background-image: url("/img/blog/${info_del_articulo[0]['imagen_arti']}")`)
+    .capa_oscura
+        h2.text-white.text-center= info_del_articulo[0]['titulo_arti']
+
+.container.p-3
+    div.row
+        div.col-12.col-lg-8.col-xl-9.p-2.p-md-5.parrafo_post
+            p.p-2
+            | Te imaginas escribir el código 
+            strong CSS
+            |  de un proyecto entero que toma días en escribir, probar e implementar, 
+            strong
+                | ¿Qué pasaría si después de algún tiempo decides cambiar los colores de todo los botones?
+            |  De seguro tendrás que ir de botón en botón cambiando esa propiedad.
+            p.p-1
+            | Con 
+            strong Sass
+            |  esto no sería algún problema ya que su forma de trabajar se asimila mucho a programación e incluso es considerado como un lenguaje de programación. 
+            b Sass
+            |  utiliza variables, condiciones, ciclos y 
+            strong Mixin
+            |  que se pueden considerar como funciones.
+            p.p-1
+            | Volvamos al ejemplo del proyecto, si necesitas cambiar el color de todo los botones simplemente tendrías que cambiar el valor de la 
+            strong variable
+            |  que estas utilizando, como sabrás un variable es un espacio de almacenamiento donde guardas un valor que puede ser remplazado. Al momento de hacer esto automáticamente todo los botones que tenía esa variable como color, se cambiaron.
+            p.p-1
+            | Los 
+            b preprocesadores
+            |  CSS son herramientas que nos permite escribir y traducir código no estándar a un código CSS estándar, al fin y al cabo los navegadores de internet solo entienden 
+            b CSS
+            |  y no 
+            b SCSS
+            |  es por eso que necesitan de una traducción 
+            b ¿Y cómo se logra aquello?
+            |  Dependiendo de tu sistema operativo en que trabajes, existen programas como 
+            b PREPROS
+            |  utilizados en Windows o 
+            b CODEKIT
+            |  en caso de MAC.
+            p.p-1
+            b ¿Por qué utilizar Sass, si en realidad existen otros como LESS o Stylus?
+            p.p-1
+            | Toma en cuenta que todo los preprocesadores hacen los mismo 
+            b “ahorran tiempo y traducen el código”
+            |  pero Sass se ha convertido en el más usado y demandado. Su comunidad ha ido creciendo y es muy fácil encontrar ayuda si estas estancado, existen mucha documentación que te puede servir y puedes encontrar a colaboradores para ayudarte.
+            p.p-1
+            b ¿Cómo se escribe código en Sass?
+            p.p-1
+            | Empecemos por las variables, puedes agregarle un nombre y un valor ejemplo: 
+            code $color_boton: #cdcdcd;
+            |  se empieza con el signo de dólar asignándole su valor con dos putos y terminando en punto y coma.
+            p.p-1
+            | Para importar un archivo scss escribes  
+            code @import “nombre_archivo.scss”;
+            .row
+                .col-12.col-md-6
+                    pre.
+                    
+                        @if condicion {
+                            "instruccion"
+                        }  
+                        
+                        @for($i from 1 to 5 ){
+                            "instrucciones-repetitivas"
+                        }
+                        
+                        @nombre(){
+                            "instruccion"
+                        }
+                .col-12.col-md-6
+                    #sabias
+                        h6.text-center ¿Sabias esto?
+                        p.p-2
+                            | Sass es el preprocesador mas utilizado y mas demandado a diferencia de los demas procesadores, aumque todos hacen lo mismo siempre ahi algo de diferencia entre ellos.
+
+            
+        .col-12.col-lg-4.col-xl-3.p-2
+             
+            br
+            br
+
+            include compartir.pug
+
+
+include ../footer.pug
