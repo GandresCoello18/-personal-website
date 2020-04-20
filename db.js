@@ -21,6 +21,7 @@ const { config } = require('./config/index');
     if(err) console.log(err);
   })
 
+  
 
 
 module.exports = connection;

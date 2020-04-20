@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const db = require('./db');
 const { config } = require('./config/index');
 const path = require('path');
 const helmet = require('helmet');
@@ -32,8 +31,6 @@ app.get('*', function(req, res){
     res.status(404).render('404.pug');
 })
 
-db.end();
-console.log('cerrar conexion');
 
 // levantamos el servidor
 app.listen(config.port, function(){

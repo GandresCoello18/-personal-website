@@ -1,13 +1,18 @@
 const express = require('express');
 const axios = require('axios');
+const { config } = require('../../config/index');
 const { dominio, dominio_developer, info_articulo } = require('../../util/util');
 const router = express.Router();
 
 router.get('/', async function(req, res){
     const { page } = req.query || 1;
 
-    const articulos = await axios.get(`${dominio()}/api/blog`);
-    const limite_por_pagina = await axios.get(`${dominio()}/api/blog/limite?page=${page}`);
+    const articulos = await axios.get(`${dominio()}/api/blog`, {
+        headers: { "access-token": config.token }
+    });
+    const limite_por_pagina = await axios.get(`${dominio()}/api/blog/limite?page=${page}`, {
+        headers: { "access-token": config.token }
+    });
     
     const pasa = limite_por_pagina.data;
     const pasa_2 = articulos.data;

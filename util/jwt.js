@@ -7,7 +7,7 @@ const rutasProtegidas = express.Router();
 
 rutasProtegidas.use((req, res, next) => {
     const token = req.headers['access-token'];
-    console.log(token);
+    //console.log(token);
 	
     if (token) {
         jwt.verify(token, config.secreto, (err, decoded) => {      
