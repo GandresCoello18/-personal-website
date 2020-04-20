@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon app.js",
     "start": "node app",
-    "estilo": "node-sass --watch public/scss/ -o public/css/ "
+    "estilo": "node-sass --watch public/scss/ -o public/css/ ",
+    "debugger": "set DEBUG=express:* & node app.js"
   },
   "keywords": [
     "personal",
@@ -24,6 +25,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "helmet": "^3.22.0",
+    "jsonwebtoken": "^8.5.1",
     "mysql": "^2.18.1",
     "node-sass": "^4.13.1",
     "nodemon": "^2.0.3",

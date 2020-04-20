@@ -1,9 +1,10 @@
 const express = require('express');
 const response = require('../../router/response');
+const { rutasProtegidas } = require('../../util/jwt');
 const controller = require('./controller-sobre-mi');
 const router = express.Router();
 
-router.get('/', function(req, res){
+router.get('/', rutasProtegidas, function(req, res){
     const { opcion } = req.query || null;
 
     controller.listar_sobre_mi(opcion)

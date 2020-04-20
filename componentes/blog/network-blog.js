@@ -1,9 +1,10 @@
 const express = require('express');
+const { rutasProtegidas } = require('../../util/jwt');
 const response = require('../../router/response');
 const controller = require('./controller-blog');
 const router = express.Router();
 
-router.get('/', function(req, res){
+router.get('/', rutasProtegidas, function(req, res){
     const { articulo } = req.query || null;
 
     controller.listar_blog(articulo)

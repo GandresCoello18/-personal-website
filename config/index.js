@@ -6,7 +6,9 @@ const config = {
   host: process.env.Host,
   user: process.env.User,
   password: process.env.Password,
-  database: process.env.Database
+  database: process.env.Database,
+  token: process.env.Token,
+  secreto: process.env.Secreto
 };
 
 module.exports = { config };

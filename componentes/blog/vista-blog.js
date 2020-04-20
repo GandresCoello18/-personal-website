@@ -35,10 +35,11 @@ router.get('/la-nube', (req, res) => llamar_datos_por_ruta('la-nube', res));
 function llamar_datos_por_ruta(ruta, res){
     info_articulo(ruta, res)
         .then( respuesta => {
-            let pasa = respuesta.data;
+            let pasa = respuesta.data; 
             res.render(`blog/${ruta}.pug`, { info_del_articulo: pasa });
         }).catch( err => {
             console.log(err);
+            res.render(`500.pug`);
         });
 }
 
