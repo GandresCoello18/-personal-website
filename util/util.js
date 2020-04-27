@@ -1,4 +1,5 @@
 var axios = require('axios');
+const { config } = require('../config/index');
 
 function dominio(){
     return "https://andres-coello-goyes.herokuapp.com";
@@ -9,7 +10,9 @@ function dominio_developer(){
 }
 
 async function info_articulo(articulo){
-    return await axios.get(`${dominio()}/api/blog?articulo=${articulo}`);
+    return await axios.get(`${dominio()}/api/blog?articulo=${articulo}`, {
+        headers: { "access-token": config.token }
+    });
 }
 
 

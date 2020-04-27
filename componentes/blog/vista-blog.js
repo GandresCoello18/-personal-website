@@ -7,10 +7,10 @@ const router = express.Router();
 router.get('/', async function(req, res){
     const { page } = req.query || 1;
 
-    const articulos = await axios.get(`${dominio()}/api/blog`, {
+    const articulos = await axios.get(`${dominio_developer()}/api/blog`, {
         headers: { "access-token": config.token }
     });
-    const limite_por_pagina = await axios.get(`${dominio()}/api/blog/limite?page=${page}`, {
+    const limite_por_pagina = await axios.get(`${dominio_developer()}/api/blog/limite?page=${page}`, {
         headers: { "access-token": config.token }
     });
     
@@ -40,7 +40,8 @@ router.get('/la-nube', (req, res) => llamar_datos_por_ruta('la-nube', res));
 function llamar_datos_por_ruta(ruta, res){
     info_articulo(ruta, res)
         .then( respuesta => {
-            let pasa = respuesta.data; 
+            let pasa = respuesta.data;
+            
             res.render(`blog/${ruta}.pug`, { info_del_articulo: pasa });
         }).catch( err => {
             console.log(err);
