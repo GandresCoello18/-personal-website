@@ -8,10 +8,10 @@ const rutas = require('./router/rutas');
 const cors = require('cors');
 
 
-const corsOptions = { origin: "https://andres-coello-goyes.herokuapp.com" };
+//const corsOptions = { origin: "https://andres-coello-goyes.herokuapp.com" };
 // nos permite leer el cuerpo del objeto { name: 'mi-nombre' }
 app.use(helmet());
-app.use(cors(corsOptions));
+//app.use(cors(corsOptions));
 app.use(bodyParse.json());
 
 //manejo de los archivos estaticos

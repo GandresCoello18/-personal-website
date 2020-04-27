@@ -18,7 +18,7 @@ body
         .row.justify-content-center
             each valor in articulo
                 .col-12.col-sm-6.col-md-4.col-lx-3.mb-4
-                    .ui.card
+                    .ui.card.centered
                         .image
                             img(src='img/blog/'+valor.imagen_arti, alt=valor.titulo_proy)
                         .content
@@ -38,8 +38,8 @@ body
         h3.text-center.p-4 Protectos Recientes
         .row.justify-content-center
             each valor in proyecto
-                .col-12.col-sm-6.col-md-4.col-lx-3.mb-4
-                    .ui.card
+                .col-12.col-sm-6.col-md-4.col-lx-3.mb-4.ml-4.ml-md-0
+                    .ui.card.centered
                         .image
                             img(src='img/proyectos/'+valor.imagen_proy, alt=valor.titulo_proy)
                         .content
