@@ -4,19 +4,16 @@ function listar(articulo){
     return new Promise( (resolve, reject) => {
         if(articulo == 'derecha'){
             db.query(`SELECT * FROM articulos ORDER BY RAND() LIMIT 4;`, (err, data) => {
-                db.releaseConnection();
                 if(err) return reject(err);
                 resolve(data);
             });
         }else if(articulo){
             db.query(`SELECT titulo_arti, imagen_arti FROM articulos WHERE enlace_arti = '${articulo}';`, (err, data) => {
-                db.releaseConnection();
                 if(err) return reject(err);
                 resolve(data);
             });
         }else{
             db.query(`SELECT * FROM articulos ORDER BY id_articulo DESC`, (err, data) => {
-                db.releaseConnection();
                 if(err) return reject(err);
                 resolve(data);
             });
@@ -39,7 +36,6 @@ function limite(page){
         }
 
         db.query(`SELECT * FROM articulos ORDER BY id_articulo DESC LIMIT ${hasta}, ${desde}`, (err, data) => {
-            db.releaseConnection();
             if(err) return reject(err);
             resolve(data);
         });
