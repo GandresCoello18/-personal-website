@@ -3,16 +3,16 @@
 .ui.list
                 
     .item
-        a.ui.facebook.button(href='https://www.facebook.com/sharer/sharer.php?u=https://andres-coello-goyes.herokuapp.com/blog/'+info_del_articulo[0]['titulo_arti'], target='_blank')
+        a.ui.facebook.button(href='https://www.facebook.com/sharer/sharer.php?u=https://andres-coello-goyes.herokuapp.com/blog/'+ruta, target='_blank')
             i.facebook.icon
             |  Facebook
             
     .item
-        a.ui.twitter.button(href='https://twitter.com/intent/tweet?text=https://andres-coello-goyes.herokuapp.com/blog/'+info_del_articulo[0]['titulo_arti']+'&hashtags=Desarrollo-Web', target='_blank')
+        a.ui.twitter.button(href='https://twitter.com/intent/tweet?text=https://andres-coello-goyes.herokuapp.com/blog/'+ruta+'&hashtags=Desarrollo-Web', target='_blank')
             i.twitter.icon
             |  Twitter
     
     .item
-        a.ui.whatsapp.button.positive(href='https://api.whatsapp.com/send?text=Me intereso este tema: https://andres-coello-goyes.herokuapp.com/blog/'+info_del_articulo[0]['titulo_arti']+', de Andres Coello', target='_blank')
+        a.ui.whatsapp.button.positive(href='https://api.whatsapp.com/send?text=Me intereso este tema: https://andres-coello-goyes.herokuapp.com/blog/'+ruta+', de Andres Coello', target='_blank')
             i.whatsapp.icon
             |  Whatsapp

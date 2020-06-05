@@ -69,7 +69,7 @@ function llamar_datos_por_ruta(ruta, res) {
     .then((respuesta) => {
       let pasa = respuesta.data;
 
-      res.render(`blog/${ruta}.pug`, { info_del_articulo: pasa });
+      res.render(`blog/${ruta}.pug`, { info_del_articulo: pasa, ruta });
     })
     .catch((err) => {
       console.log(err);
