@@ -1,0 +1,4 @@
+Options +SymLinksIfOwnerMatch 
+RewriteEngine On 
+RewriteCond %{HTTP_HOST}^https://andres-coello-goyes.herokuapp.com[NC.OR] 
+RewriteRule ^{.*}$ https://andres-coello-goyes.herokuapp.com/$1 [L,R=301, NC]

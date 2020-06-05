@@ -1,4 +1,6 @@
 - var titulo = 'Portafolio | Andres Coello Goyes'
+- var keywords = ['Portafolio de Andres coello', 'Proyectos web de Andres', 'Desarrollador de software Ecuador', 'software en aplicaciones web'];
+- var description = 'Portafolio de Andres coello, lugar donde muestra algunos de sus proyectos mas recientes de apliciones web, mobil y escritorio.';
 include head.pug
 .bg-dark
     include nav.pug
@@ -11,15 +13,14 @@ include head.pug
                     .image
                         img(src='img/proyectos/'+valor.imagen_proy)
                     .content
-                        a.header= valor.titulo_proy
+                        a(href=valor.enlace_pry, target='_blank').header= valor.titulo_proy
                         .meta
                             span.date 
                             .description= valor.descripcion_proy
                     .extra.content
                         a(href=valor.enlace_pry, target='_blank')
                                 i.globe.icon
-                                b &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                                b Ver Sitio...
+                                b &nbsp;
+                                b Link
 
-        
 include footer.pug

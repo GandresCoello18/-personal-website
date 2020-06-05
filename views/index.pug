@@ -1,4 +1,6 @@
 - var titulo =  'Andres Coello Goyes'
+- var keywords = ['sitio web de Andres coello', 'Desarrollador web Andres coello', 'Desarrollador de software Ecuador', 'Joven autodidacta en software'];
+-var description = 'Sitio web personal de Andres Coello Goyes donde muestra las experiencias, logros, articulos y algunos proyectos';
 include head.pug
 body
     .portada
@@ -7,14 +9,14 @@ body
             .row.justify-content-center.p-3.text-center
                 .col-8.col-sm-5.col-md-4.col-lg-2.mt-5
                     figure
-                        img(src='img/profile.jpg')
+                        img(src='img/profile.jpg' alt='andres coello goyes')
                 .col-12.col-md-9.col-lg-11.text-white
-                    h1 Desarrollador Web
-                    h2 Andres Coello Goyes
-                    p Joven autodidacta, apasionado por el desarrollo de software y creacion de productos informaticos,
-                    p enfocado  en el desarrollo web y en constante aprendizaje sobre nuevas tecnologias.
+                    h1 Andres Coello Goyes
+                    h2 Desarrollador Web
+                    p Joven autodidacta, apasionado por el desarrollo de software,
+                    p enfocado en el desarrollo web y en constante aprendizaje sobre nuevas tecnologías.
     .container-fluid.p-5
-        h3.text-center.mb-5 Articulos Recientes
+        h3.text-center.mb-5 Artículos Recientes
         .row.justify-content-center
             each valor in articulo
                 .col-12.col-sm-6.col-md-4.col-lx-3.mb-4
@@ -22,7 +24,7 @@ body
                         .image
                             img(src='img/blog/'+valor.imagen_arti, alt=valor.titulo_proy)
                         .content
-                            a.header= valor.titulo_arti
+                            a(href='/blog/'+valor.enlace_arti, target='_blank').header= valor.titulo_arti
                             .meta
                             span.date
                             br 
@@ -31,11 +33,11 @@ body
                             a(href='/blog/'+valor.enlace_arti, target='_blank')
                                 i.user.icon
                                 b= valor.categoria
-                                b &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                b &nbsp; &nbsp; &nbsp; &nbsp;
                                 b Leer Mas...
 
             
-        h3.text-center.p-4 Protectos Recientes
+        h3.text-center.p-4 Proyectos Recientes
         .row.justify-content-center
             each valor in proyecto
                 .col-12.col-sm-6.col-md-4.col-lx-3.mb-4.ml-4.ml-md-0
@@ -43,7 +45,7 @@ body
                         .image
                             img(src='img/proyectos/'+valor.imagen_proy, alt=valor.titulo_proy)
                         .content
-                            a.header= valor.titulo_proy
+                            a(href=valor.enlace_pry, target='_blank').header= valor.titulo_proy
                             .meta
                             span.date
                             br
@@ -52,8 +54,8 @@ body
                             a(href=valor.enlace_pry, target='_blank')
                                 i.globe.icon
                                 
-                                b &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                                b Ver Sitio...
+                                b &nbsp;
+                                b Ver Sitio
 
             
 include footer.pug

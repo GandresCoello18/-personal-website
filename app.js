@@ -1,15 +1,22 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-const { config } = require('./config/index');
-const path = require('path');
-const helmet = require('helmet');
-const bodyParse = require('body-parser');
-const rutas = require('./router/rutas');
-const cors = require('cors');
+const { config } = require("./config/index");
+const path = require("path");
+const RewriteMiddleware = require("express-htaccess-middleware");
+const helmet = require("helmet");
+const bodyParse = require("body-parser");
+const rutas = require("./router/rutas");
+const cors = require("cors");
 
+const RewriteOptions = {
+  file: path.resolve(__dirname, ".htaccess"),
+  verbose: process.env.ENV_NODE == "development",
+  watch: process.env.ENV_NODE == "development",
+};
 
 //const corsOptions = { origin: "https://andres-coello-goyes.herokuapp.com" };
 // nos permite leer el cuerpo del objeto { name: 'mi-nombre' }
+app.use(RewriteMiddleware(RewriteOptions));
 app.use(helmet());
 //app.use(cors(corsOptions));
 app.use(bodyParse.json());
@@ -27,12 +34,11 @@ app.set("view engine", "pug");
 rutas(app);
 
 // redireccionamiento
-app.get('*', function(req, res){
-    res.status(404).render('404.pug');
-})
-
+app.get("*", function (req, res) {
+  res.status(404).render("404.pug");
+});
 
 // levantamos el servidor
-app.listen(config.port, function(){
-    console.log('app corriendo');
-})
+app.listen(config.port, function () {
+  console.log("app corriendo");
+});

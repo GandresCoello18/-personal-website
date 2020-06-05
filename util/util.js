@@ -2,7 +2,8 @@ var axios = require('axios');
 const { config } = require('../config/index');
 
 function dominio(){
-    return "https://andres-coello-goyes.herokuapp.com";
+    return "http://127.0.0.1:3000";
+    //return "https://andres-coello-goyes.herokuapp.com";
 }
 
 function dominio_developer(){
