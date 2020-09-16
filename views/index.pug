@@ -13,10 +13,10 @@ body
                 .col-12.col-md-9.col-lg-11.text-white
                     h1 Andres Coello Goyes
                     h2 Desarrollador Web
-                    p Joven autodidacta, apasionado por el desarrollo de software,
-                    p enfocado en el desarrollo web y en constante aprendizaje sobre nuevas tecnologías.
+                    p Joven autodidacta, apasionado por el desarrollo de software.
+                    p Enfocado en el desarrollo web y en constante aprendizaje sobre nuevas tecnologías.
     .container-fluid.p-5
-        h3.text-center.mb-5 Artículos Recientes
+        h2.text-center.mb-5 Artículos Recientes
         .row.justify-content-center
             each valor in articulo
                 .col-12.col-sm-6.col-md-4.col-lx-3.mb-4
@@ -37,7 +37,7 @@ body
                                 b Leer Mas...
 
             
-        h3.text-center.p-4 Proyectos Recientes
+        h2.text-center.p-4 Proyectos Recientes
         .row.justify-content-center
             each valor in proyecto
                 .col-12.col-sm-6.col-md-4.col-lx-3.mb-4.ml-4.ml-md-0
@@ -57,5 +57,10 @@ body
                                 b &nbsp;
                                 b Ver Sitio
 
-            
+        .row.justify-content-center.mt-4
+            .col-6.col-md-2
+                a(href='/portafolio')
+                    button.ui.teal.basic.button Más Proyectos..!
+
+
 include footer.pug

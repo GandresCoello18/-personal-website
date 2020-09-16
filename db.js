@@ -4,7 +4,7 @@ const { config } = require("./config/index");
 function handleDisconnect() {
   let configuracion = {
     host: config.host,
-    port: 3306,
+    port: 11136,
     user: config.user,
     password: config.password,
     database: config.database,

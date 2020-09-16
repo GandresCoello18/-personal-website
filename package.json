@@ -4,11 +4,10 @@
   "description": "Sitio web personal y portafolio",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "dev": "nodemon app.js",
-    "start": "node app",
     "estilo": "node-sass --watch public/scss/ -o public/css/ ",
-    "debugger": "set DEBUG=express:* & node app.js",
-    "cypress:open": "cypress open"
+    "debugger": "set DEBUG=express:* & node app.js"
   },
   "keywords": [
     "personal",
@@ -31,10 +30,9 @@
     "moment": "^2.26.0",
     "mysql": "^2.18.1",
     "node-sass": "^4.13.1",
-    "nodemon": "^2.0.3",
     "pug": "^2.0.4"
   },
   "devDependencies": {
-    "cypress": "^4.7.0"
+    "nodemon": "^2.0.4"
   }
 }

@@ -1,4 +1,9 @@
+PassengerBaseURI /
+PassengerAppRoot /home/andresco/etc/andres-coello-goyes.com
+PassengerAppType node
+PassengerStartupFile app.js
+
 Options +SymLinksIfOwnerMatch 
 RewriteEngine On 
-RewriteCond %{HTTP_HOST}^https://andres-coello-goyes.herokuapp.com[NC.OR] 
-RewriteRule ^{.*}$ https://andres-coello-goyes.herokuapp.com/$1 [L,R=301, NC]
+RewriteCond %{HTTP_HOST}^http://andres-coello-goyes.com/[NC.OR] 
+RewriteRule ^{.*}$ http://andres-coello-goyes.com//$1 [L,R=301, NC]
