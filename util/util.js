@@ -3,7 +3,7 @@ const { config } = require("../config/index");
 
 function dominio() {
   // return "http://127.0.0.1:3000";
-  return "http://andres-coello-goyes.com";
+  return "https://andres-coello-goyes.herokuapp.com";
 }
 
 function dominio_developer() {
