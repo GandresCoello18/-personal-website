@@ -2,8 +2,8 @@ var axios = require("axios");
 const { config } = require("../config/index");
 
 function dominio() {
-  return "http://127.0.0.1:3000";
-  //return "http://andres-coello-goyes.com";
+  // return "http://127.0.0.1:3000";
+  return "http://andres-coello-goyes.com";
 }
 
 function dominio_developer() {
