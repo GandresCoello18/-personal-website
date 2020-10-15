@@ -1,0 +1,31 @@
+- var titulo = 'Galeria | Andres Coello Goyes'
+- var keywords = ['Galeria de Andres coello', 'Fotos de Andres coelo', 'Imagenes de Andres coello Ecuador'];
+- var description = 'Imagenes de andres coello lugares, eventos, setup.';
+include head.pug
+.bg-dark
+    include nav.pug
+
+h2.text-center.p-2 Galeria
+.container-fluid.p-5
+    .row.justify-content-center
+        each valor in ['dev-1','dev-2','dev-4','dev-5','dev-6','dev-7']
+            .col-12-col-md-4.col-lg-3.mb-4.p-1.ml-4.ml-md-0
+                .ui.card
+                    a.content(href='https://www.instagram.com/coellogoyes/', target='_blank')
+                        .right.floated.meta Developer
+                        img.ui.avatar.image(src='/img/profile.jpeg')
+                        |  Andres Coello
+                    .image(data-toggle='modal' data-target='#modalGaleria'+valor)
+                        img.card-img-top.p-2.p-md-4(src='img/galeria/'+valor+'.jpg')
+
+                .modal.fade(id='modalGaleria'+valor tabindex='-1' aria-labelledby='modalGaleria' aria-hidden='true')
+                    .modal-dialog
+                        .modal-content
+                            .modal-header
+                                h5#exampleModalLabel.modal-title Andrés Coello Goyes
+                                button.close(type='button' data-dismiss='modal' aria-label='Close')
+                                span(aria-hidden='true') ×
+                            .modal-body
+                                img.card-img-top.p-2.p-md-4(src='img/galeria/'+valor+'.jpg')
+
+include footer.pug

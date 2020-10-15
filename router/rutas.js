@@ -13,6 +13,7 @@ const home_vista = require('../componentes/home/vista-home');
 const blog_vista = require('../componentes/blog/vista-blog');
 const experiencia_vista = require('../componentes/experiencia/vista-experiencia');
 const contacto_vista = require('../componentes/contacto/vista-contacto');
+const galeria = require('../componentes/galeria/vista-galeria');
 
 
 const rutas = function (server){
@@ -29,6 +30,7 @@ const rutas = function (server){
     server.use('/sobre-mi', sobre_mi_vista);
     server.use('/blog', blog_vista);
     server.use('/experiencia', experiencia_vista);
+    server.use('/galeria', galeria);
 }
 
 module.exports = rutas ;

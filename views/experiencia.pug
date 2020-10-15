@@ -5,18 +5,18 @@ include head.pug
 .bg-dark
     include nav.pug
 
+h2.text-center.p-2 Lugares, Eventos, Conferencias.
 .container-fluid.p-5
     .row.justify-content-center
         each valor in experiencia
-            .col-12-col-md-6.col-lg-4.mb-4.p-1
+            .col-12-col-md-4.col-lg-3.mb-4.p-1
                 .card
+                    img.card-img-top.p-2.p-md-4(src='img/experiencia/'+valor.imagen_ex, alt=valor.titulo_ex)
                     .card-body
                             h5.card-title= valor.titulo_ex
                             p.card-text= valor.descripcion_ex
                                 
                             p.card-text
                                 small.text-muted= valor.fecha_ex
-                    img.card-img-top(src='img/experiencia/'+valor.imagen_ex, alt=valor.titulo_ex)
 
-        
 include footer.pug
