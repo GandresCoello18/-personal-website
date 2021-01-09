@@ -1,9 +1,10 @@
 body{
-  width: 100%;
+  /*width: 100%;
   height: 100vh;
   background-image: url("../img/fondo-blanco-2-361x640.png") !important;
   background-position: center !important;
-  background-size: 100% auto !important;
+  background-size: 100% auto !important;*/
+  background-color: rgb(237, 233, 233) !important;
 }
 .portada {
   width: 100%;

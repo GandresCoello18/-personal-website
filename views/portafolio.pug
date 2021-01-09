@@ -11,7 +11,7 @@ include head.pug
             .col-12.col-sm-6.col-md-4.col-lg-3.col-lx-2.mb-4
                 .ui.card.centered
                     .image
-                        img(src='img/proyectos/'+valor.imagen_proy)
+                        img(src='img/proyectos/'+valor.imagen_proy, style='max-height: 250px; object-fit: cover;')
                     .content
                         a(href=valor.enlace_pry, target='_blank').header= valor.titulo_proy
                         .meta
